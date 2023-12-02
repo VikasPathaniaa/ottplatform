@@ -1,14 +1,12 @@
 import { Option, Select } from "@material-tailwind/react";
+import { useEffect, useState } from "react";
 import { VideoCard } from "../components/common/VideoCard";
+import VideoPopUp from "../components/videoPopUp/VideoPopUp";
 import useFetch from "../hooks/useFetch";
 import { fetchRequest } from "../utils/api";
-import { useEffect, useState } from "react";
-import VideoPopUp from "../components/videoPopUp/VideoPopUp";
-import Spinner from "../components/common/Spinner";
 
 let filters: any = {};
 const AllVideos = () => {
-  const arr = [1, 2, 3, 4, 5, 67, 8, 9, 9];
   const [loading, setLoading] = useState(false);
 
   const [data, setData] = useState<any>([]);

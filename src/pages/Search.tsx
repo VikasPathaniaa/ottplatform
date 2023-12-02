@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchRequest } from '../utils/api';
+import Spinner from '../components/common/Spinner';
 import { VideoCard } from '../components/common/VideoCard';
 import VideoPopUp from '../components/videoPopUp/VideoPopUp';
 import useFetch from '../hooks/useFetch';
-import Spinner from '../components/common/Spinner';
+import { fetchRequest } from '../utils/api';
 
 const Search = () => {
     const [data, setData] = useState(null);

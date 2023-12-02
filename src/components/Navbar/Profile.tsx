@@ -1,4 +1,4 @@
-import { Chip, Avatar, Typography } from "@material-tailwind/react";
+import { Avatar, Chip, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 
 export function Profile() {

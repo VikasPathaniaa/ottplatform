@@ -1,6 +1,5 @@
-import React from 'react';
-import Header from '../components/Navbar';
 import { Navigate } from 'react-router-dom';
+import Header from '../components/Navbar';
 
 const Layout = ({children}:any) => {
   let isToken = localStorage.getItem("token")

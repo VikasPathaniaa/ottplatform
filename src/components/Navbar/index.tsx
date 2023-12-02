@@ -1,14 +1,11 @@
 import {
-  Navbar,
-  Typography,
-  IconButton,
   Button,
   Input,
+  Navbar
 } from "@material-tailwind/react";
-import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
-import { Profile } from "./Profile";
-import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Profile } from "./Profile";
 
 export default function Header() {
 
