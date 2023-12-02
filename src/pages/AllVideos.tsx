@@ -7,13 +7,12 @@ import { fetchRequest } from "../utils/api";
 
 let filters: any = {};
 const AllVideos = () => {
-  const [loading, setLoading] = useState(false);
 
   const [data, setData] = useState<any>([]);
   const { data: genresData }: any = useFetch(`/genre/movie/list`);
   const [show, setShow] = useState(false);
   const [vidId, setVidId] = useState(0);
-  const { data: videoData ,loading:vidLoading } = useFetch(`/movie/${vidId}/videos`);
+  const { data: videoData ,loading:vidLoading }:any = useFetch(`/movie/${vidId}/videos`);
 
   useEffect(()=>{
     setVidId(vidId)
@@ -21,10 +20,8 @@ const AllVideos = () => {
  
     const videoKey = videoData?.results?.[0]?.key;
   const fetchInitialData = () => {
-    setLoading(true);
     fetchRequest(`/discover/movie`, filters).then((res) => {
       setData(res);
-      setLoading(false);
     });
   };
 
@@ -32,7 +29,7 @@ const AllVideos = () => {
     fetchInitialData();
   }, []);
 
-  const onChangeHandle = (value: string) => {
+  const onChangeHandle = (value: any) => {
     filters["with_genres"] = value;
     fetchInitialData();
   };

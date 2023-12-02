@@ -62,8 +62,7 @@ const SearchHandle = ()=>{
             }}
             name="search"
             value={searchInput}
-            onChange={searchQueryHandler}
-          />
+            onChange={searchQueryHandler} crossOrigin={undefined}          />
           <Button
             size="sm"
             color="white"

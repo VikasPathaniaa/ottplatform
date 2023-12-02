@@ -5,12 +5,12 @@ import VideoPopUp from '../components/videoPopUp/VideoPopUp';
 import useFetch from '../hooks/useFetch';
 
 const Home = () => {
-    const { data: trendingData, loading: trendingLoading } = useFetch('/trending/movie/day');
-    const { data: popularData } = useFetch('/movie/popular');
-    const { data: topRatedData } = useFetch('/movie/top_rated');
+    const { data: trendingData, loading: trendingLoading }:any = useFetch('/trending/movie/day');
+    const { data: popularData }:any = useFetch('/movie/popular');
+    const { data: topRatedData }:any = useFetch('/movie/top_rated');
     const [show, setShow] = useState(false);
     const [vidId, setVidId] = useState(0);
-    const { data: videoData , loading } = useFetch(`/movie/${vidId}/videos`);
+    const { data: videoData , loading }:any = useFetch(`/movie/${vidId}/videos`);
 
     const videoKey = videoData?.results?.[0]?.key;
 

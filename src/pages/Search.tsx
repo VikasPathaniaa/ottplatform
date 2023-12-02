@@ -7,13 +7,13 @@ import useFetch from '../hooks/useFetch';
 import { fetchRequest } from '../utils/api';
 
 const Search = () => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<any>(null);
     const [loading, setLoading] = useState(false);
     const { query } = useParams();
 
     const [show, setShow] = useState(false);
     const [vidId, setVidId] = useState(0);
-    const { data: videoData, loading: vidLoading } = useFetch(`/movie/${vidId}/videos`);
+    const { data: videoData, loading: vidLoading }:any = useFetch(`/movie/${vidId}/videos`);
 
     useEffect(() => {
         setVidId(vidId)

@@ -19,7 +19,11 @@ export function SignUp() {
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState<ErrorTypes>({});
+  const [errors, setErrors] = useState<ErrorTypes>({
+    name: "",
+    email:  "",
+    password: "",
+  });
   const navigate = useNavigate()
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,8 +84,7 @@ export function SignUp() {
               }}
               name="name"
               value={formData.name}
-              onChange={handleInputChange}
-            />
+              onChange={handleInputChange} crossOrigin={undefined}            />
             {errors.name && <Typography variant="small" color="deep-orange" className="mt[-12px]" >
               {errors.name}
             </Typography>}
@@ -95,8 +98,7 @@ export function SignUp() {
               }}
               name="email"
               value={formData.email}
-              onChange={handleInputChange}
-            />
+              onChange={handleInputChange} crossOrigin={undefined}            />
             {errors.email && <Typography variant="small" color="deep-orange" className="mt[-12px]" >
               {errors.email}  </Typography>
             }
@@ -111,8 +113,7 @@ export function SignUp() {
               }}
               name="password"
               value={formData.password}
-              onChange={handleInputChange}
-            />
+              onChange={handleInputChange} crossOrigin={undefined}            />
             {errors.password && <Typography variant="small" color="deep-orange" className="mt[-12px]" >
               {errors.password}  </Typography>
             }

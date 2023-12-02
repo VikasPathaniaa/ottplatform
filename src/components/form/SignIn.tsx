@@ -76,31 +76,29 @@ import { toast } from "react-toastify";
               Your Email
             </Typography>
             <Input
-              size="lg"
-              name="email"
-              value={data.email}
-              placeholder="name@mail.com"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-              labelProps={{
-                className: "before:content-none after:content-none",
-              }}
-              onChange={handleInputChange}
-            />
+                size="lg"
+                name="email"
+                value={data.email}
+                placeholder="name@mail.com"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                onChange={handleInputChange} crossOrigin={undefined}            />
             <Typography variant="h6" color="blue-gray" className="-mb-3">
               Password
             </Typography>
             <Input
-              type="password"
-              name="password"
-              value={data.password}
-              size="lg"
-              placeholder="********"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-              labelProps={{
-                className: "before:content-none after:content-none",
-              }}
-              onChange={handleInputChange}
-            />
+                type="password"
+                name="password"
+                value={data.password}
+                size="lg"
+                placeholder="********"
+                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                onChange={handleInputChange} crossOrigin={undefined}            />
           </div>
           
           <Button className="mt-6" fullWidth onClick={handleSignIn}>

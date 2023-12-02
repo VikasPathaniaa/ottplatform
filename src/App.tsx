@@ -8,7 +8,7 @@ import AllVideos from "./pages/AllVideos";
 import Home from "./pages/Home";
 import { getApiConfiguration } from "./redux/homeSlice";
 import { fetchRequest } from "./utils/api";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Search from "./pages/Search";
 
@@ -23,7 +23,6 @@ const App = () => {
 
   const fetchApiConfig = () => {
     fetchRequest("/configuration").then((res) => {
-      console.log(res);
 
       const url = {
         backdrop: res.images.secure_base_url + "original",
